@@ -1,0 +1,19 @@
+#i
+summary(airquality)
+
+#ii
+library(reshape2)
+melt(airquality)
+
+#iii
+t1=melt(airquality,id.vars=c("Month","Day"))
+print(head(t1))
+
+#iv
+t2=cast(t1, Month + Day ~ variable) 
+t2
+
+#v
+t2=cast(t1,Month~Day,mean) 
+t2
+
