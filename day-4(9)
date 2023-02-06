@@ -1,0 +1,13 @@
+#i
+da=ChickWeight
+model=lm(weight ~ Time+factor(Diet),da=ChickWeight)
+summary(model)
+
+#ii
+ndata=data.frame(Time = 10,Diet=1)
+prediction=predict(model,newdata = ndata)
+prediction
+
+#iii
+d1=da[da$Time==10&da$Diet==1,"weight"] - prediction
+d1
