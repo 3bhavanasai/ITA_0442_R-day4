@@ -1,0 +1,17 @@
+#i
+da=ChickWeight
+summary(da)
+      boxplot(weight ~ Diet,da=ChickWeight,main ="Weight by
+Diet", xlab="Diet",ylab="Weight",col='red')
+
+#ii
+ diet1=ChickWeight[ChickWeight$Diet == 1, ]
+  hist(diet1$weight, main = "Weight in Diet-1", xlab = "Weight (in grams)", ylab = "Frequency")
+
+#iii
+library(ggplot2)
+  ggplot(ChickWeight, aes(x=Time, y=weight, color=Diet)) +
+    geom_point() +
+    ggtitle("Weight vs Time Grouped by Diet") +
+    xlab("Time (days)") +
+    ylab("Weight (grams)")
