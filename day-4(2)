@@ -1,0 +1,13 @@
+
+#i
+A=c(90, 50, 70, 80, 70, 60, 20, 30,80, 90, 20)
+print(mean(A))
+print(median(A))
+print(sort(-table(A))[1])
+
+#ii
+a=c(90, 50, 70, 80, 70, 60, 20, 30,80, 90, 20)
+a1=sort(unique(a))
+a2=length(a1)
+print(paste("2nd highest value :",a1[a2-1]))
+print(paste("3rd lowest value :",a1[3]))
